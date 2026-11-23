@@ -1,0 +1,16 @@
+cat << 'EOF' > .gitignore
+# Generated reports and logs
+*.csv
+*.log
+
+# Backup, editor, and temporary files
+*.bak
+*.swp
+*.swo
+*~
+*.tmp
+
+# macOS and system files
+.DS_Store
+Thumbs.db
+EOF
