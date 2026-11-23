@@ -1,3 +1,5 @@
-google.com
-github.com
-expired.badssl.com
+# Production & test endpoints
+cloudflare.com
+wikipedia.org:443
+wrong.host.badssl.com
+nonexistent.invalid
