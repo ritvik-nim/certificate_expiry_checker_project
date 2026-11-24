@@ -1,13 +1,11 @@
 cat << 'EOF' > .gitignore
 *.csv
 *.log
-
 *.bak
 *.swp
 *.swo
 *~
 *.tmp
-
 .DS_Store
 Thumbs.db
 EOF
