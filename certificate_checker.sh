@@ -99,13 +99,13 @@ parse_expiry_epoch() {
     local raw="$1"
     local ep=""
 
-    # Primary Linux / GNU date -d path
+    
     ep="$(date -u -d "$raw" +%s 2>/dev/null)" && [[ -n "$ep" ]] && {
         printf '%s\n' "$ep"
         return 0
     }
 
-    # macOS / BSD date fallback
+    
     local clean_date
     clean_date="$(printf '%s' "$raw" | sed -E 's/[[:space:]]+(GMT|UTC)$//')"
     ep="$(date -u -j -f "%b %d %H:%M:%S %Y" "$clean_date" +%s 2>/dev/null)" && [[ -n "$ep" ]] && {
