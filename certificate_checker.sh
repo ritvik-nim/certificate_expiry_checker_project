@@ -165,7 +165,7 @@ for entry in "${DOMAINS[@]}"; do
     host="$entry"
     port="443"
 
-    if [[ "$entry" == : ]]; then
+    if [[ "$entry" == *:* ]]; then
         host="${entry%%:*}"
         port="${entry##*:}"
     fi
